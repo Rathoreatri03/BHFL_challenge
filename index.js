@@ -7,9 +7,20 @@ app.use(express.json());
 app.use(cors());
 
 // Your personal details - REPLACE THESE
-const USER_ID = "your_name_ddmmyyyy";
-const EMAIL = "your_email@university.com";
+const USER_ID = "rathoreatri";
+const EMAIL = "rathoreatri@gmail.com";
 const ROLL_NUMBER = "your_roll_number";
+
+// Root routeBAAI
+app.get('/', (req, res) => {
+    res.json({
+        message: "Welcome to BFHL API",
+        endpoints: {
+            get: "/bfhl",
+            post: "/bfhl"
+        }
+    });
+});
 
 // POST endpoint
 app.post('/bfhl', (req, res) => {
